@@ -1,4 +1,5 @@
-import sqlalchemy, datetime
+import sqlalchemy
+from pydantic.datetime_parse import datetime
 from sqlalchemy import MetaData, Integer, String, TIMESTAMP, JSON, ForeignKey, Table, Column
 
 metadata = MetaData()
@@ -19,8 +20,6 @@ users = Table(
     Column("username", String, nullable=False),
     Column("password", String, nullable=False),
     Column("registered_at", TIMESTAMP, default=datetime.utcnow),
-    Column("role_id", Integer, ForeignKey("roles.id"))
+    Column("role_id", Integer, ForeignKey("user_roles.id"))
 )
 
-engine = sqlalchemy.create_engine()
-metadata.cr
