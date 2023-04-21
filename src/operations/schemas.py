@@ -5,8 +5,9 @@ from pydantic import BaseModel
 
 class OperationCreate(BaseModel):
     id: int
-    quantity: str
-    figi: str
-    instrument_type: str
-    date: datetime
-    type: str
+    task_name: str
+    task_description: str
+    task_start: datetime
+    task_end: datetime
+    task_create: datetime
+    task_author: int
