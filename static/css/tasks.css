@@ -1,0 +1,182 @@
+.tasks-background {
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    overflow: hidden;
+}
+
+.tasks-header {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tasks-header > h1, h2 {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.tasks-info {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 32px 0px;
+    gap: 3vw;
+}
+
+.tasks-info-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0.3vw;
+}
+
+.tasks-info-block > h4 {
+    opacity: 0.7;
+}
+
+.tasks-list {
+    width: 100%;
+    height: 62vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    border-radius: var(--border-radius);
+    margin-top: 64px;
+    align-content: flex-start;
+    padding-right: 5px;
+    overflow-x: hidden;
+}
+
+.task {
+    width: 33.3%;
+    height: 252px;
+    padding: 0px 10px 10px;
+}
+
+.task:nth-child(1n) {
+    padding-left: 0px;
+}
+
+.task:nth-child(3n) {
+    padding-right: 0px;
+}
+
+.task-bg {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background: #FEE4CB;
+    padding: 32px 32px 0px 32px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.task-header > h4 {
+    opacity: 0.5;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
+.task-menu-icon {
+    opacity: 0.8;
+    margin-right: 10px;
+}
+
+.task-description {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.task-description h3, h4 {
+    opacity: 0.7;
+}
+
+.task-progress {
+    margin-top: 50px;
+    gap: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.task-progress > h4 {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.task-progress-value {
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    border-radius: var(--border-radius);
+}
+
+.task-progress-bar {
+    height: 100%;
+    background: #ff942e;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.task-progress-bar > h4 {
+    position: relative;
+    background: #fff;
+    text-align: center;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    right: -25px;
+    color: rgb(31 28 46 / 70%);
+    padding: 5px 10px;
+    opacity: 1;
+}
+
+.task-footer {
+    border-top: solid 1px #fff;
+    height: 20%;
+    width: 200%;
+    margin-left: -50%;
+}
+
+
+.tasks-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tasks-list::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: #1f1c2e24;
+}
+
+.tasks-list::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

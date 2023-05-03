@@ -1,4 +1,4 @@
-from sqlalchemy import TIMESTAMP, Column, Integer, MetaData, String, Table, ForeignKey
+from sqlalchemy import TIMESTAMP, Column, Integer, MetaData, String, Table, ForeignKey, Enum
 from src.auth.models import user
 
 metadata = MetaData()
@@ -12,5 +12,6 @@ operation = Table(
     Column("task_start", TIMESTAMP, nullable=False),
     Column("task_end", TIMESTAMP, nullable=False),
     Column("task_create", TIMESTAMP, nullable=False),
+    Column("task_progress", Integer, nullable=False),
     Column("task_author", Integer, ForeignKey(user.c.id))
 )
