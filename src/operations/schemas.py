@@ -10,4 +10,5 @@ class OperationCreate(BaseModel):
     task_start: datetime
     task_end: datetime
     task_create: datetime
+    task_progress: int
     task_author: int
